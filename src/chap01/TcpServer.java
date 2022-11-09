@@ -1,4 +1,4 @@
-package server;
+package chap01;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.InputStream;
@@ -9,8 +9,8 @@ import java.net.Socket;
 public class TcpServer{
     public static void main(String[] args) throws Exception {
         try (ServerSocket server = new ServerSocket(8001);
-            FileOutputStream fos = new FileOutputStream("server_recv.txt");
-            FileInputStream fis = new FileInputStream("server_send.txt")){
+            FileOutputStream fos = new FileOutputStream("./chap01/server_recv.txt");
+            FileInputStream fis = new FileInputStream("./chap01/server_send.txt")){
                 System.out.println("Waiting for connection from client...");
                 Socket socket = server.accept();
                 System.out.println("Done connection with Client.");
