@@ -1,1 +1,10 @@
-I am Client.
+GET /index.html HTTP/1.1
+Host: host.docker.internal
+Accept: text/html,application/xhtm+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Accept-Encoding: gzip,deflate, br
+Accept-Language: ja-JP,ja;q=0.9,en-US;q=0.8,en;q=0.7
+DNT: 1
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36
+
+今のTcpClient.javaでは↑の空白行を送れないため、Apacheから408が返ってくる。そのため、このようにBody部分を擬似的に作り出し、空白行を送るようにしている。

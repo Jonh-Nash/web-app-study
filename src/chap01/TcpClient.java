@@ -8,17 +8,17 @@ import java.net.Socket;
 
 public class TcpClient {
     public static void main(String[] args) throws Exception{
-        try (Socket socket = new Socket("localhost", 8001);
+        try (Socket socket = new Socket("host.docker.internal", 80);
         FileInputStream fis = new FileInputStream("./chap01/client_send.txt");
         FileOutputStream fos = new FileOutputStream("./chap01/client_recv.txt")){
+
+            System.out.println("Socket start.");
 
             int ch;
             OutputStream output = socket.getOutputStream();
             while ((ch = fis.read()) != -1) {
                 output.write(ch);
             }
-
-            output.write(0);
 
             InputStream input = socket.getInputStream();
             while ((ch = input.read()) != -1) {

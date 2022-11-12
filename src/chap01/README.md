@@ -24,3 +24,27 @@ TcpServer と TcpClient の両方で Socket インスタンスができると接
 
 * OutputStream と write(): 相手への送信
 * InputStream と read(): 相手からの受信
+
+## Apache を手軽に試す方法
+Docker Desktop で Apache を立ち上げて、そこに TcpClient.java から接続することで行える。
+devcontainer からは `localhost` にはつなげない（公開されていない）ため、`host.docker.internal` を使用する。
+
+以下は、src/ でのコマンド
+
+```
+docker container run --name myapache -d -it -p 80:80 -v /Users/justy/dev/web-app-study/src/chap01/docs:/usr/local/apache2/htdocs httpd 
+```
+
+コマンドで動かしたコンテナを消したい時
+```
+docker rm -f <containr ID>
+```
+
+## 1.3.4 での注意点
+### Apacheから400が返ってくる場合
+もし、VSCodeなどでclient_send.txtを編集しているとすると、改行の形式がLFになっているから400が返ってくる可能性が高い。
+CRLFにしてから送ってみよう。
+
+### Apacheから408が返ってくる場合
+TcpClient.javaがclient_send.txtの最終行である空白行を送れていない可能性がある。
+body部分を適当に書いて、空白行を送るようにしてみよう。
