@@ -1,4 +1,4 @@
-GET /index.html HTTP/1.1
+GET /animalface_usagi.png HTTP/1.1
 Host: host.docker.internal
 Accept: text/html,application/xhtm+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
 Accept-Encoding: gzip,deflate, br

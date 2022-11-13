@@ -35,6 +35,11 @@ devcontainer からは `localhost` にはつなげない（公開されていな
 docker container run --name myapache -d -it -p 80:80 -v /Users/justy/dev/web-app-study/src/chap01/docs:/usr/local/apache2/htdocs httpd 
 ```
 
+実行中のコンテナに入りたい時
+```
+docker exec -it myapache /bin/bash
+```
+
 コマンドで動かしたコンテナを消したい時
 ```
 docker rm -f <containr ID>
