@@ -40,6 +40,11 @@ docker container run --name myapache -d -it -p 80:80 -v /Users/justy/dev/web-app
 docker exec -it myapache /bin/bash
 ```
 
+コンテナのログを見たい時
+```
+docker logs myapache
+```
+
 コマンドで動かしたコンテナを消したい時
 ```
 docker rm -f <containr ID>
