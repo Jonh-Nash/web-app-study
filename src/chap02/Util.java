@@ -43,8 +43,10 @@ class Util {
         return df.format(cal.getTime()) + " GMT";
     }
 
-    private static final HashMap<String, String> contentTypeMap =
-        new HashMap<String, String>() {{
+    static final HashMap<String, String> contentTypeMap =
+        new HashMap<String, String>() {
+            private static final long serialVersionUID = 1L;
+            {
             put("html", "text/html");
             put("htm", "text/html");
             put("css", "text/css");
@@ -53,13 +55,15 @@ class Util {
             put("jpg", "image/jpg");
             put("jpeg", "image/jpeg");
             put("gif", "image/gif");
-        }};
+        }
+    };
 
     static String getContentType(String ext) {
         String ret = contentTypeMap.get(ext.toLowerCase());
         if (ret==null) {
             return "application/octet-stream";
+        } else {
+            return ret;
         }
-        return ret;
     }
 }

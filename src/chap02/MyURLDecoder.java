@@ -12,9 +12,9 @@ public class MyURLDecoder {
         digit *= 16;
 
         if (b2 >= 'A') {
-            digit = (b2 & 0xDF) - 'A' + 10;
+            digit += (b2 & 0xDF) - 'A' + 10;
         } else {
-            digit = (b2 - '0');
+            digit += (b2 - '0');
         }
         return digit;
     }
