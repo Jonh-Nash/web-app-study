@@ -3,4 +3,4 @@ services:
     java:
         volumes:
             - '$HOME/dev/web-app-study/src:/web-app-study'
-        image: openjdk:11-slim
+        image: tomcat:8.5.84-jdk11-temurin
