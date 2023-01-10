@@ -1,6 +1,0 @@
-version: '3'
-services:
-    java:
-        volumes:
-            - '$HOME/dev/web-app-study/src:/webapps'
-        image: tomcat:8.5.84-jdk11-temurin
