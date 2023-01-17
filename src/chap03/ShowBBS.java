@@ -18,9 +18,6 @@ public class ShowBBS extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
-        // このprintlnでどのようにresponsインスタンスに書き込んでいるのだろうか？
-        // responseインスタンスのどのフィールドに書き込んでいるのだろうか？
-        // デバックで確かめてみる
         out.println("<html>");
         out.println("<head>");
         out.println("<title>テスト掲示板</title>");
