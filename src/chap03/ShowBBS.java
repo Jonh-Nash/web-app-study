@@ -33,7 +33,7 @@ public class ShowBBS extends HttpServlet {
         out.println("<hr/>");
 
         for (Message message : Message.messageList) {
-            out.println("<p>『" + escapeHtml(message.title) + "』 &sbsp;nbsp;"
+            out.println("<p>『" + escapeHtml(message.title) + "』 &nbsp;&nbsp;"
                 + escapeHtml(message.handle) + " さん&nbsp;&nbsp;"
                 + escapeHtml(message.date.toString()) + "</p>"
                 );
