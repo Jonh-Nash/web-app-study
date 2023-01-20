@@ -17,12 +17,12 @@ private String escapeHtml(String src) {
 </head>
 <body>
 <h1>テスト掲示板</h1>
-<from action="/testbbs_jsp/PostBBS" method="POST">
+<form action="/testbbs_jsp/PostBBS" method="POST">
 タイトル: <input type="text" name="title" size="60"/><br/>
 ハンドル名: <input type="text" name="handle"/><br/>
 <textarea name='message' rows='4' cols='60'></textarea><br/>
 <input type='submit'/>
-</from>
+</form>
 <hr/>
 <%
 for (Message message : Message.messageList) {

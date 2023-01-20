@@ -18,7 +18,7 @@
   * `docker build -t myapp .`
   * `docker run --name myapp -p 8080:8080 -d myapp:latest`
 3. 画面表示
-  * `http://localhost:8080/testbbs_jsb/ShowBBS`
+  * `http://localhost:8080/testbbs_jsb/showbbs.jsp`
 4. 削除
   * `docker stop myapp`
   * `docker rm myapp`

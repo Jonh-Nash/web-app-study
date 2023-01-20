@@ -7,7 +7,7 @@
 
     <servlet>
         <servlet-name>PostBBS</servlet-name>
-        <servlet-class>bbx.PostBBS</servlet-class>
+        <servlet-class>bbs.PostBBS</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>PostBBS</servlet-name>
